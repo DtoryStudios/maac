@@ -4,7 +4,7 @@ import React from "react";
 function Navbar() {
   return (
     <div className="bg-[#1E1E24] h-[80px] lg:h-[100px] flex items-center lg:px-16 px-6">
-      <img src="/logo.svg" className="lg:h-16 h-12" alt="" />
+      <img src="/asset/logo.svg" className="lg:h-20 h-12" alt="" />
       <ul className="text-white/90 hidden lg:flex items-center text-sm space-x-9 font-light ml-16 shrink-0">
         <li>Courses</li>
         <li>About us</li>
