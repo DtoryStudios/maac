@@ -18,7 +18,7 @@ export default function Home() {
           </button>
         </div>
         <div className="lg:w-1/2 flex items-center justify-center mt-10">
-          <div className="w-full p-6 lg:p-8 bg-white/20 backdrop-blur-2xl text-white">
+          <div className="w-full max-w-[550px] p-6 lg:p-8 bg-white/20 backdrop-blur-2xl text-white">
             <h1 className="font-semibold text-lg font-poppins text-center">
               Career Counselling
             </h1>
