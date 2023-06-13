@@ -2,23 +2,23 @@
 export default function Home() {
   return (
     <main>
-      <div className="bg-[url('/asset/hero_image_1.png')] w-full lg:flex items-center py-16 lg:py-32 px-6 lg:px-28 lg:space-x-10">
+      <div className="bg-[url('/asset/hero_image_1.png')] w-full lg:flex items-center py-16 lg:py-32 px-6 lg:px-28 lg:space-x-10 object-cover bg-no-repeat object-center">
         <div className="lg:w-1/2">
-          <h1 className="text-5xl lg:text-7xl font-bold leading-[1.4] lg:leading-[1.4] text-white">
+          <h1 className="text-5xl lg:text-7xl font-bold leading-[1.4] lg:leading-[1.3] text-white">
             Build your career with the best
           </h1>
-          <p className="mt-6 leading-7 lg:leading-9 text-white lg:text-base text-sm">
+          <p className="mt-5 leading-7 lg:leading-9 text-white lg:text-base text-sm">
             Allow your imagination flame to come to life with energy. Our
             animation institute in Durgapur will help you to enhance your
             talents and prepare you for a successful career and higher
             opportunities
           </p>
-          <button className="text-sm px-7 py-3 lg:py-4 bg-zinc-900 text-white mt-10 rounded-full shadow-2xl">
+          <button className="text-sm px-7 py-3 lg:py-4 bg-[#4D0099] text-white mt-10 rounded font-poppins">
             <span>Start Now - Admission Open 2023</span>
           </button>
         </div>
         <div className="lg:w-1/2 flex items-center justify-center mt-10">
-          <div className="w-full p-6 lg:p-8 bg-white/10 backdrop-blur-2xl text-white">
+          <div className="w-full p-6 lg:p-8 bg-white/20 backdrop-blur-2xl text-white">
             <h1 className="font-semibold text-lg font-poppins text-center">
               Career Counselling
             </h1>
