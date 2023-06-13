@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main>
-      <div className="bg-[url('/asset/hero_image_1.png')] w-full lg:flex items-center py-16 lg:py-32 px-6 lg:px-28 lg:space-x-10 object-cover bg-no-repeat object-center">
+      <div className="hero-image w-full lg:flex items-center py-16 lg:py-32 px-6 lg:px-28 lg:space-x-10 bg-red-50">
         <div className="lg:w-1/2">
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.4] lg:leading-[1.3] text-white">
             Build your career with the best

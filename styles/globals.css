@@ -16,3 +16,10 @@ li {
 li:hover {
   opacity: 1;
 }
+
+.hero-image {
+  background-image: url("/asset/hero_image_1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
