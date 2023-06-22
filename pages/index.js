@@ -90,7 +90,7 @@ export default function Home() {
   const ref = React.useRef();
 
   return (
-    <main>
+    <main className="w-full overflow-x-hidden">
       <Landing />
       <AboutUs />
       <Recruiters />
