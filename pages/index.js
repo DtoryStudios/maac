@@ -14,6 +14,7 @@ import {
 import Softwares from "@/components/Softwares";
 import Testimonials from "@/components/Fragments/Testimonials";
 import Ignite from "@/components/Ignite";
+import Footer from "@/components/Footer";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -98,6 +99,7 @@ export default function Home() {
       <Softwares />
       <Testimonials />
       <Ignite />
+      <Footer />
     </main>
   );
 }

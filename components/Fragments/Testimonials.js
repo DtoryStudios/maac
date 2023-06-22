@@ -15,7 +15,7 @@ function Testimonials() {
         </h1>
 
         <div className="mt-16 lg:mt-36">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 lg:px-10">
             <div className="bg-white rounded-md shrink-0 p-8">
               <div className="flex items-center text-sm">
                 <img src="/asset/student.png" className="h-10" alt="" />
