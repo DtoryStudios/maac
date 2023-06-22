@@ -1,13 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
+import AboutUs from "@/components/Fragments/AboutUs";
 import Landing from "@/components/Fragments/Landing";
+import Recruiters from "@/components/Recruiters";
+import Projects from "@/components/Fragments/Projects";
 import React, { useEffect, useState } from "react";
 
 import {
   StackedCarousel,
   ResponsiveContainer,
 } from "react-stacked-center-carousel";
+import Softwares from "@/components/Softwares";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -86,6 +90,10 @@ export default function Home() {
   return (
     <main>
       <Landing />
+      <AboutUs />
+      <Recruiters />
+      <Projects />
+      <Softwares />
     </main>
   );
 }

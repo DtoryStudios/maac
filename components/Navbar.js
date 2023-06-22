@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
+import Sidebar from "./Sidebar";
 
 function Navbar() {
   const [scroll, setScroll] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -70,7 +72,10 @@ function Navbar() {
           className="bg-transparent outline-none text-sm text-white w-full placeholder:text-white/60 ml-4"
         />
       </div>
-      <button className="ml-auto text-white lg:hidden">
+      <button
+        onClick={() => setSidebarOpen(true)}
+        className="ml-auto text-white lg:hidden"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -86,6 +91,7 @@ function Navbar() {
           />
         </svg>
       </button>
+      <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
     </div>
   );
 }
