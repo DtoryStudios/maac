@@ -13,6 +13,7 @@ import {
 } from "react-stacked-center-carousel";
 import Softwares from "@/components/Softwares";
 import Testimonials from "@/components/Fragments/Testimonials";
+import Ignite from "@/components/Ignite";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -96,6 +97,7 @@ export default function Home() {
       <Projects />
       <Softwares />
       <Testimonials />
+      <Ignite />
     </main>
   );
 }

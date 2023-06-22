@@ -23,3 +23,10 @@ li:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.ignite-image {
+  background-image: url("/asset/ignite.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
