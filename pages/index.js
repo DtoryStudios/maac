@@ -12,6 +12,7 @@ import {
   ResponsiveContainer,
 } from "react-stacked-center-carousel";
 import Softwares from "@/components/Softwares";
+import Testimonials from "@/components/Fragments/Testimonials";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -94,6 +95,7 @@ export default function Home() {
       <Recruiters />
       <Projects />
       <Softwares />
+      <Testimonials />
     </main>
   );
 }
