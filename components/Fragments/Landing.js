@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Landing() {
+  const [formData, setFormData] = useState({
+    name: "",
+  });
   return (
     <div className="hero-image min-h-screen w-full lg:flex items-center py-28 lg:py-32 px-6 lg:px-28 lg:space-x-5 bg-red-50">
       <div className="lg:w-1/2">
@@ -25,20 +28,28 @@ function Landing() {
             <input
               type="text"
               placeholder="Your full name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               className="bg-black/50 placeholder:text-white/50 px-5 py-5 col-span-2 rounded"
               name=""
               id=""
             />
             <input
-              type="text"
-              placeholder="Your full name"
+              type="tel"
+              value={formData.phone}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
+              placeholder="Your phone number"
               className="bg-black/50 col-span-2 lg:col-span-1 placeholder:text-white/50 px-5 py-5 rounded"
               name=""
               id=""
             />
             <input
               type="text"
-              placeholder="Your full name"
+              placeholder="Your email address"
               className="bg-black/50 col-span-2 lg:col-span-1 placeholder:text-white/50 px-5 py-5 rounded"
               name=""
               id=""

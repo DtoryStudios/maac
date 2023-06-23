@@ -13,7 +13,7 @@ function Ignite() {
         Awaken the Boundless Depths of Your Imagination to Transform Ideas into
         Extraordinary Masterpieces of Art and Expression with MAAC Durgapur.
       </p>
-      <button className="text-white px-5 py-4 lg:py-2 bg-[#340068] text-sm lg:w-fit rounded-md mt-6">
+      <button className="text-white px-5 py-4 lg:py-2 bg-[#EAC435] text-sm lg:w-fit rounded-md mt-6">
         Apply now
       </button>
     </div>

@@ -1,5 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 function Courses() {
   return (
@@ -14,13 +21,39 @@ function Courses() {
           Our courses
         </h1>
 
-        <div className="mt-16 lg:mt-36">
-          <div className="h-[557px] w-[1100px] relative ">
-            <img
-              src="/asset/visual_effects.png"
-              className="absolute inset-0 w-full h-full object-cover"
-              alt=""
-            />
+        <div className="mt-6  carousel">
+          <div className="container">
+            <h1 className="heading">Flower Gallery</h1>
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+              }}
+              pagination={{ el: ".swiper-pagination", clickable: true }}
+              navigation={false}
+              modules={[EffectCoverflow, Pagination, Navigation]}
+              className="swiper_container"
+            >
+              <SwiperSlide>
+                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+              </SwiperSlide>{" "}
+              <SwiperSlide>
+                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+              </SwiperSlide>{" "}
+              <SwiperSlide>
+                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>
