@@ -22,7 +22,7 @@ function Navbar() {
         scroll ? "bg-[#1E1E24]" : "bg-[#1E1E24]/20"
       } fixed inset-x-0 top-0 h-[80px] lg:h-[90px] flex items-center lg:px-16 px-6 z-20 transition-all duration-300`}
     >
-      <img src="/asset/logo.png" className="lg:h-12 h-12" alt="" />
+      <img src="/asset/logo.png" className="lg:h-16 h-12" alt="" />
       <ul className="text-white/90 hidden lg:flex items-center space-x-12 ml-16 shrink-0">
         <li>Courses</li>
         <li>About us</li>

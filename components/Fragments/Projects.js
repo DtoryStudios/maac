@@ -15,10 +15,28 @@ function Projects() {
         </h1>
 
         <div className="mt-16 lg:mt-36">
-          <div className="flex items-center shrink-0 mt-10 space-x-2 overflow-auto pl-7">
-            <div className="h-56 w-56 bg-red-50 shrink-0"></div>
-            <div className="h-56 w-56 bg-red-50 shrink-0"></div>
-            <div className="h-56 w-56 bg-red-50 shrink-0"></div>
+          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 shrink-0 mt-10 space-x-7 overflow-auto pl-7">
+            <div>
+              <img
+                src="/asset/project_1.png"
+                alt=""
+                className="h-[400px] w-[400px] object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/asset/project_2.png"
+                alt=""
+                className="h-[400px] w-[400px] object-cover"
+              />
+            </div>
+            <div>
+              <img
+                src="/asset/project_3.png"
+                alt=""
+                className="h-[400px] w-[400px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

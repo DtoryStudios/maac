@@ -3,10 +3,10 @@ import React from "react";
 function Ignite() {
   return (
     <div className="py-20 ignite-image flex flex-col justify-center px-6 lg:px-20">
-      <h1 className="text-white text-5xl font-black text-center lg:text-left">
+      <h1 className="text-white text-5xl font-extrabold text-center lg:text-left">
         Ignite the
       </h1>
-      <h2 className="text-5xl text-white font-black mt-4 text-center lg:text-left leading-[1.4]">
+      <h2 className="text-5xl text-white font-extrabold mt-4 text-center lg:text-left leading-[1.4]">
         <span className="text-[#EAC435]">Creative Fire</span> Within
       </h2>
       <p className="lg:w-[460px] text-center lg:text-left text-white font-light mt-7 text-sm leading-8">

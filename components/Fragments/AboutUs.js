@@ -5,9 +5,9 @@ function AboutUs() {
   return (
     <div className="lg:min-h-screen h-[550px] bg-white relative">
       <img
-        src="/asset/about_outline.png"
+        src="/asset/about_outline.svg"
         alt=""
-        className="absolute -left-28 lg:left-0 top-6 lg:top-20 h-32 lg:h-44 opacity-70 object-contain"
+        className="absolute -left-28 lg:left-0 top-6 lg:top-20 h-32 lg:h-44 opacity-50 object-contain"
       />
       <div className="mt-0 absolute inset-0 h-full w-full pt-20 lg:pt-40 lg:px-20 px-7">
         <h1 className="text-3xl lg:text-6xl font-bold">About us</h1>
