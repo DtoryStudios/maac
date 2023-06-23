@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 function Search({ open, setOpen }) {
   useEffect(() => {
@@ -6,6 +6,20 @@ function Search({ open, setOpen }) {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
   }, [open]);
+
+  useEffect(() => {
+    // esc key press
+
+    const handleEsc = (event) => {
+      if (event.keyCode === 27) {
+        setOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+    input.current && input.current.focus();
+  }, []);
+
+  const input = useRef(null);
   return (
     <>
       {open && (
@@ -27,6 +41,7 @@ function Search({ open, setOpen }) {
                 />
               </svg>
               <input
+                ref={input}
                 type="text"
                 placeholder="Search for a course"
                 className="bg-transparent outline-none text-white w-full placeholder:text-white/60 ml-3"
