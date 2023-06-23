@@ -30,7 +30,7 @@ function Footer() {
       </div>
       <div>
         <h1 className="text-xl text-black font-semibold">Connect with us</h1>
-        <ul className="text-sm space-x-3 mt-5 flex items-center">
+        <ul className="text-sm space-x-4 mt-5 flex items-center">
           <li>
             <iconify-icon
               height="24"
@@ -40,8 +40,8 @@ function Footer() {
           </li>
           <li>
             <iconify-icon
-              height="24"
-              width="24"
+              height="30"
+              width="30"
               icon="mdi:youtube"
             ></iconify-icon>
           </li>

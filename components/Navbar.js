@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
+import Search from "./Search";
 
 function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -50,7 +52,10 @@ function Navbar() {
           </div>
         </li>
       </ul>
-      <div className="ml-auto hidden lg:flex items-center text-white px-5 w-[300px] h-[50px] bg-[#30303a] focus-within:border-white rounded">
+      <div
+        onClick={() => setSearchOpen(true)}
+        className="ml-auto hidden lg:flex items-center text-white px-5 w-[300px] h-[50px] bg-[#30303a] focus-within:border-white rounded"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -68,6 +73,7 @@ function Navbar() {
 
         <input
           type="text"
+          readOnly
           placeholder="Search for courses"
           className="bg-transparent outline-none text-sm text-white w-full placeholder:text-white/60 ml-4"
         />
@@ -92,6 +98,7 @@ function Navbar() {
         </svg>
       </button>
       <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+      <Search open={searchOpen} setOpen={setSearchOpen} />
     </div>
   );
 }

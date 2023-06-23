@@ -15,6 +15,7 @@ import Softwares from "@/components/Softwares";
 import Testimonials from "@/components/Fragments/Testimonials";
 import Ignite from "@/components/Ignite";
 import Footer from "@/components/Footer";
+import Courses from "@/components/Fragments/Courses";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -93,6 +94,7 @@ export default function Home() {
   return (
     <main className="w-full overflow-x-hidden">
       <Landing />
+      <Courses />
       <AboutUs />
       <Recruiters />
       <Projects />

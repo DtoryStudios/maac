@@ -1,7 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Search from "./Search";
 
 function Sidebar({ open, setOpen }) {
+  const [searchOpen, setSearchOpen] = useState(false);
+  useEffect(() => {
+    open
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [open]);
   return (
     <>
       {open && (
@@ -24,7 +31,31 @@ function Sidebar({ open, setOpen }) {
               </svg>
             </button>
           </div>
-          <ul className="px-8 text-white space-y-10 text-xl">
+          <div className="px-6">
+            <div
+              onClick={() => {
+                setSearchOpen(true);
+              }}
+              className="bg-[#292932] h-12 rounded-md flex items-center px-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5 text-white/50"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+              <span className="text-white/50 ml-2">Search for a course</span>
+            </div>
+          </div>
+          <ul className="px-8 mt-10 text-white space-y-10 text-lg">
             <li>Courses</li>
             <li>About us</li>
             <li>Showcase</li>
@@ -34,6 +65,7 @@ function Sidebar({ open, setOpen }) {
           </ul>
         </div>
       )}
+      <Search open={searchOpen} setOpen={setSearchOpen} />
     </>
   );
 }
