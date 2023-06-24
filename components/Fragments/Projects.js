@@ -3,7 +3,7 @@ import React from "react";
 
 function Projects() {
   return (
-    <div className="lg:min-h-screen h-[550px] bg-white relative overflow-x-hidden">
+    <div className="lg:h-[950px] h-[1550px] bg-white relative overflow-hidden">
       <img
         src="/asset/project_outline.png"
         alt=""
@@ -15,7 +15,7 @@ function Projects() {
         </h1>
 
         <div className="mt-16 lg:mt-36">
-          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 shrink-0 mt-10 space-x-7 overflow-auto pl-7">
+          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 shrink-0 mt-10 px-5">
             <div>
               <img
                 src="/asset/project_1.png"
@@ -38,6 +38,7 @@ function Projects() {
               />
             </div>
           </div>
+          <div className="h-96"></div>
         </div>
       </div>
     </div>

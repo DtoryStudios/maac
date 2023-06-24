@@ -10,7 +10,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 function Courses() {
   return (
-    <div className="lg:min-h-screen min-h-[550px] bg-black relative pb-20 lg:pb-32  ">
+    <div className="lg:h-[1150px] h-[700px] bg-black relative pb-20 lg:pb-32 overflow-hidden">
       <img
         src="/asset/courses_outline.png"
         alt=""
@@ -23,13 +23,14 @@ function Courses() {
 
         <div className="mt-6  carousel">
           <div className="container">
-            <h1 className="heading">Flower Gallery</h1>
             <Swiper
               effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
               loop={true}
-              slidesPerView={"auto"}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              grabCursor={true}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
@@ -37,21 +38,55 @@ function Courses() {
                 modifier: 2.5,
               }}
               pagination={{ el: ".swiper-pagination", clickable: true }}
-              navigation={false}
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container"
             >
               <SwiperSlide>
-                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+                <div className="bg-red-500 h-[400px] w-[85%] relative">
+                  <div className="absolute inset-0 w-full h-full bg-blue-100">
+                    <img
+                      src="/asset/project_1.png"
+                      className="w-full absolute inset-0 h-full object-cover"
+                      alt=""
+                    />
+                    <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
+                      <h2 className="text-white font-medium text-2xl">
+                        Visual Effects Next
+                      </h2>
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+                <div className="bg-red-500 h-[400px] w-[85%] relative">
+                  <img
+                    src="/asset/visual_effects.png"
+                    className="absolute inset-0 w-full h-full"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
+                    <h2 className="text-white font-medium text-2xl">
+                      Archi Viz Next
+                    </h2>
+                  </div>
+                </div>
               </SwiperSlide>{" "}
               <SwiperSlide>
-                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+                <div className="bg-red-500 h-[400px] w-[85%] relative">
+                  <img
+                    src="/asset/visual_effects.png"
+                    className="absolute inset-0 w-full h-full"
+                    alt=""
+                  />
+                  <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
+                    <h2 className="text-white font-medium text-2xl">
+                      3D Animation Pro
+                    </h2>
+                  </div>
+                </div>
               </SwiperSlide>{" "}
               <SwiperSlide>
-                <div className="bg-red-500 h-[500px] w-[80%]"></div>
+                <div className="bg-red-500 h-[400px] w-[85%]"></div>
               </SwiperSlide>
             </Swiper>
           </div>
