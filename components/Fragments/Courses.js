@@ -7,6 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import courses from "@/static/courses";
 
 function Courses() {
   return (
@@ -21,7 +22,7 @@ function Courses() {
           Our courses
         </h1>
 
-        <div className="mt-6  carousel">
+        <div className="mt-6 carousel">
           <div className="container">
             <Swiper
               effect={"coverflow"}
@@ -41,53 +42,32 @@ function Courses() {
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container"
             >
-              <SwiperSlide>
-                <div className="bg-red-500 h-[400px] w-[85%] relative">
-                  <div className="absolute inset-0 w-full h-full bg-blue-100">
-                    <img
-                      src="/asset/project_1.png"
-                      className="w-full absolute inset-0 h-full object-cover"
-                      alt=""
-                    />
-                    <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
-                      <h2 className="text-white font-medium text-2xl">
-                        Visual Effects Next
-                      </h2>
+              {courses.map((course, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="bg-red-500 h-[400px] w-[90%] relative">
+                      <div className="absolute inset-0 w-full h-full bg-blue-100">
+                        <img
+                          src={course.image}
+                          className="w-full absolute inset-0 h-full object-cover"
+                          alt=""
+                        />
+                        <div className="absolute inset-0 h-full w-full z-20 flex flex-col justify-end p-6">
+                          <h2 className="text-white font-bold text-2xl max-w-[760px] leading-10">
+                            {course.name}
+                          </h2>
+                          <p className="text-white text-xs mt-6 lg:mt-2 font-light flex items-center">
+                            <iconify-icon icon="mdi:clock"></iconify-icon>
+                            <span className="ml-2">
+                              Duration: {course.duration}
+                            </span>
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="bg-red-500 h-[400px] w-[85%] relative">
-                  <img
-                    src="/asset/visual_effects.png"
-                    className="absolute inset-0 w-full h-full"
-                    alt=""
-                  />
-                  <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
-                    <h2 className="text-white font-medium text-2xl">
-                      Archi Viz Next
-                    </h2>
-                  </div>
-                </div>
-              </SwiperSlide>{" "}
-              <SwiperSlide>
-                <div className="bg-red-500 h-[400px] w-[85%] relative">
-                  <img
-                    src="/asset/visual_effects.png"
-                    className="absolute inset-0 w-full h-full"
-                    alt=""
-                  />
-                  <div className="absolute inset-0 h-full w-full bg-black/50 z-20 flex flex-col justify-end p-6">
-                    <h2 className="text-white font-medium text-2xl">
-                      3D Animation Pro
-                    </h2>
-                  </div>
-                </div>
-              </SwiperSlide>{" "}
-              <SwiperSlide>
-                <div className="bg-red-500 h-[400px] w-[85%]"></div>
-              </SwiperSlide>
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         </div>
