@@ -1,6 +1,10 @@
-import React, { useEffect, useRef } from "react";
+/* eslint-disable @next/next/no-img-element */
+import courses from "@/static/courses";
+import React, { useEffect, useRef, useState } from "react";
 
 function Search({ open, setOpen }) {
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
   useEffect(() => {
     open
       ? (document.body.style.overflow = "hidden")
@@ -18,6 +22,18 @@ function Search({ open, setOpen }) {
     window.addEventListener("keydown", handleEsc);
     input.current && input.current.focus();
   }, []);
+
+  useEffect(() => {
+    if (query == "") {
+      setResults([]);
+
+      return;
+    }
+    let results = courses.filter((course) => {
+      return course.name.toLowerCase().includes(query.toLowerCase());
+    });
+    setResults(results);
+  }, [query]);
 
   const input = useRef(null);
   return (
@@ -42,12 +58,39 @@ function Search({ open, setOpen }) {
               </svg>
               <input
                 ref={input}
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 type="text"
                 placeholder="Search for a course"
                 className="bg-transparent outline-none text-white w-full placeholder:text-white/60 ml-3"
                 name=""
                 id=""
               />
+            </div>
+            <div className="grid grid-cols-1 gap-3 mt-5 place-content-center place-items-center">
+              {results.map((course, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="lg:flex overflow-hidden items-center lg:h-32 lg:w-[60%] bg-black/20  hover:bg-black/30 rounded-md transition-all"
+                  >
+                    <img
+                      src={course.image}
+                      className="lg:h-32 lg:w-56 w-full object-cover"
+                      alt=""
+                    />
+                    <div className="ml-3 p-3">
+                      <h1 className="text-white font-bold text-2xl">
+                        {course.name}
+                      </h1>
+                      <p className="text-white text-xs mt-2 font-light flex items-center">
+                        <iconify-icon icon="mdi:clock"></iconify-icon>
+                        <span className="ml-2">{course.duration}</span>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <button
