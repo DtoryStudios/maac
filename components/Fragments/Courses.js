@@ -11,56 +11,26 @@ const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
 });
 
 function Courses() {
-  const slides = [
-    {
+  const slides = courses.map((course) => {
+    return {
       key: uuidv4(),
       content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
+        <div className="h-[550px] w-[80vw] relative">
+          <img src={course.image} alt={course.title} />
+          <div className="absolute bottom-0 p-7 z-10">
+            <h2 className="text-white text-3xl font-bold">{course.name}</h2>
+            <p className="text-base mt-5 text-white flex items-center space-x-2">
+              <iconify-icon icon="mdi:clock"></iconify-icon>
+              <span> Duration: {course.duration}</span>
+            </p>
+          </div>
+        </div>
       ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
-      ),
-    },
-  ];
+      title: course.title,
+      description: course.description,
+      link: course.link,
+    };
+  });
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,
@@ -88,28 +58,37 @@ function Courses() {
               animationConfig={state.config}
             />
           </div>
-          <button
-            className="text-white mr-10 mt-24"
-            onClick={() => {
-              setState({
-                ...state,
-                goToSlide: state.goToSlide + 1,
-              });
-            }}
-          >
-            Go right
-          </button>
-          <button
-            className="text-white"
-            onClick={() => {
-              setState({
-                ...state,
-                goToSlide: state.goToSlide - 1,
-              });
-            }}
-          >
-            Go left
-          </button>
+
+          <div className="flex items-center justify-between mt-24">
+            <button
+              className="text-white/50"
+              onClick={() => {
+                setState({
+                  ...state,
+                  goToSlide: state.goToSlide + 1,
+                });
+              }}
+            >
+              <iconify-icon
+                height="70"
+                icon="ph:arrow-left-thin"
+              ></iconify-icon>
+            </button>
+            <button
+              className="text-white/80"
+              onClick={() => {
+                setState({
+                  ...state,
+                  goToSlide: state.goToSlide - 1,
+                });
+              }}
+            >
+              <iconify-icon
+                height="100"
+                icon="ph:arrow-right-thin"
+              ></iconify-icon>
+            </button>
+          </div>
         </div>
       </div>
     </div>
