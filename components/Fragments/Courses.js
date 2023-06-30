@@ -15,97 +15,49 @@ function Courses() {
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
     {
       key: uuidv4(),
       content: (
-        <div
-          style={{
-            width: "800px",
-            height: "600px",
-            backgroundColor: "red",
-          }}
-        ></div>
+        <div className="h-[400px] w-screen lg:w-[600px] bg-red-500"></div>
       ),
     },
   ];
@@ -116,7 +68,7 @@ function Courses() {
     config: config.gentle,
   });
   return (
-    <div className="lg:h-[1150px] h-[700px] bg-black relative pb-20 lg:pb-32 overflow-hidden">
+    <div className="lg:h-[1150px] h-[1000px] bg-black relative pb-20 lg:pb-32 overflow-hidden">
       <img
         src="/asset/courses_outline.png"
         alt=""
