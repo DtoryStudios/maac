@@ -30,3 +30,16 @@ li:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.imageContainer1 {
+  background-image: url("/courses/pp3av.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.imageContainer2 {
+  background-image: url("/courses/pp3ax.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
