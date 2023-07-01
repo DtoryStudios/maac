@@ -11,32 +11,6 @@ const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
 });
 
 function Courses() {
-  const returnBgUrl = (url) => {
-    return `url(${url})`;
-  };
-  const slides = courses.map((course) => {
-    return {
-      key: uuidv4(),
-      content: (
-        <div className="h-[500px] lg:h-[550px] lg:w-[900px] w-screen">
-          <div className={`${course.bg}`}></div>
-          <div className="absolute left-0 bottom-10 px-16 z-10">
-            <h2 className="text-white text-xl lg:text-3xl font-bold">
-              {course.name}
-            </h2>
-            <p className="text-base mt-5 text-white flex items-center space-x-2">
-              <iconify-icon icon="mdi:clock"></iconify-icon>
-              <span> Duration: {course.duration}</span>
-            </p>
-          </div>
-        </div>
-      ),
-      title: course.title,
-      description: course.description,
-      link: course.link,
-    };
-  });
-
   const slidesCopy = [
     {
       key: uuidv4(),
@@ -298,7 +272,7 @@ function Courses() {
         </h1>
 
         <div className="mt-36">
-          <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+          <div style={{ width: "100%", height: "500px", margin: "0 auto" }}>
             <Carousel
               slides={slidesCopy}
               goToSlide={state.goToSlide}
