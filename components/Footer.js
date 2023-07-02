@@ -60,11 +60,13 @@ function Footer() {
       </div>
 
       <div className="mt-10">
-        <div className="border-t space-y-5 lg:space-y-0 border-[#777777] lg:flex lg:items-center lg:justify-between pt-10">
-          <span className="text-sm font-light">
+        <div className="border-t space-y-4 lg:space-y-0 border-[#777777] lg:flex lg:items-center lg:justify-between pt-10">
+          <p className="text-xs lg:text-sm font-light">
             Copyright © 2023 MAAC Durgapur - All rights reserved
-          </span>
-          <span className="text-sm font-light">Designed by Dtory Studios</span>
+          </p>
+          <p className="text-xs lg:text-sm font-light">
+            Designed by Dtory Studios
+          </p>
         </div>
       </div>
     </div>
