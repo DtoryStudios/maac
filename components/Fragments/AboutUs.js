@@ -29,7 +29,16 @@ function AboutUs() {
             </p>
           </div>
           <div className="lg:w-1/2 hidden lg:flex items-center justify-center">
-            <div className="h-56 w-[60%] bg-pink-50"></div>
+            <div className="h-60 w-[70%] bg-pink-50">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/ODFj7zFovcA"
+                title="Leveraging Breakthrough AI | MAAC Durgapur"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
