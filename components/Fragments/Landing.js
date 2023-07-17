@@ -16,7 +16,7 @@ function Landing() {
   }, [loading]);
   return (
     <>
-      <div className="hero-image min-h-screen w-full lg:flex items-center py-28 lg:py-32 px-6 lg:px-28 lg:space-x-5 bg-red-50">
+      <div className="hero-image min-h-screen w-full lg:flex items-center py-28 lg:py-32 px-6 lg:px-28 lg:space-x-5">
         <div className="lg:w-1/2 relative">
           <img
             src="/asset/arrow_trail_right.png"
