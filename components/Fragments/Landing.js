@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import courses from "@/static/courses";
 import React, { useEffect, useState } from "react";
 
@@ -20,7 +21,7 @@ function Landing() {
         <div className="lg:w-1/2 relative">
           <img
             src="/asset/arrow_trail_right.png"
-            className="absolute -right-10 -top-28 h-[200px]"
+            className="absolute -right-10 top-32 lg:-top-28 h-[200px] hidden lg:block"
             alt=""
           />
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.4] lg:leading-[1.2] text-white">
