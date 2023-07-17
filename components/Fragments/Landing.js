@@ -17,7 +17,12 @@ function Landing() {
   return (
     <>
       <div className="hero-image min-h-screen w-full lg:flex items-center py-28 lg:py-32 px-6 lg:px-28 lg:space-x-5 bg-red-50">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 relative">
+          <img
+            src="/asset/arrow_trail_right.png"
+            className="absolute -right-10 -top-28 h-[200px]"
+            alt=""
+          />
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.4] lg:leading-[1.2] text-white">
             Build your career with the best.
           </h1>
@@ -32,9 +37,12 @@ function Landing() {
           </button>
         </div>
         <div className="lg:w-1/2 flex items-center justify-center mt-16 lg:mt-0">
-          <div className="w-full max-w-[500px] p-6 lg:p-8 bg-white/5 backdrop-blur-2xl text-white">
+          <div className="w-full max-w-[500px] p-6 lg:p-8 bg-white backdrop-blur-2xl relative">
+            <span className="absolute -translate-y-1/2 tracking-wider top-0 left-4 uppercase text-sm py-1 px-4 rounded-full bg-[#340068] text-white font-medium">
+              LIMITED
+            </span>
             <h1 className="font-semibold text-lg font-poppins text-center">
-              Career Counselling
+              FREE Career Counselling
             </h1>
             <form
               onSubmit={async (e) => {
@@ -69,7 +77,7 @@ function Landing() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="bg-black/50 placeholder:text-white/50 px-5 py-5 col-span-2 rounded"
+                className="bg-[#CCCCCC] placeholder:text-black/50 px-5 py-5 col-span-2 rounded"
                 name=""
                 id=""
               />
@@ -81,7 +89,7 @@ function Landing() {
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 placeholder="Your phone number"
-                className="bg-black/50 col-span-2 lg:col-span-1 placeholder:text-white/50 px-5 py-5 rounded"
+                className="bg-[#CCCCCC] placeholder:text-black/50 col-span-2 lg:col-span-1 px-5 py-5 rounded"
                 name=""
                 id=""
               />
@@ -93,7 +101,7 @@ function Landing() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="bg-black/50 col-span-2 lg:col-span-1 placeholder:text-white/50 px-5 py-5 rounded"
+                className="bg-[#CCCCCC] placeholder:text-black/50 col-span-2 lg:col-span-1 px-5 py-5 rounded"
                 name=""
                 id=""
               />
@@ -109,7 +117,7 @@ function Landing() {
                   });
                 }}
                 placeholder="Select your courses"
-                className="bg-black/50 placeholder:text-white/50 col-span-2 px-5 py-5 rounded transition-all"
+                className="bg-[#CCCCCC] placeholder:text-black/50  col-span-2 px-5 py-5 rounded transition-all"
                 name=""
                 id=""
               />
@@ -128,7 +136,7 @@ function Landing() {
                     formData.email === "" ||
                     formData.course === ""
                   }
-                  className="mt-5 w-full disabled:opacity-50 bg-white text-black text-center py-4 rounded"
+                  className="mt-5 w-full disabled:opacity-50 bg-[#EAC435] text-black text-center py-4 rounded"
                 >
                   Submit
                 </button>
