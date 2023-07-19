@@ -3,7 +3,7 @@ import React from "react";
 
 function Recruiters() {
   return (
-    <div className="bg-[#340068] lg:h-[335px] w-full py-16">
+    <div id="placement" className="bg-[#340068] lg:h-[335px] w-full py-16">
       <h2 className="text-center text-xl font-light text-[#E4E4E4] tracking-widest">
         OUR RECRUITERS
       </h2>

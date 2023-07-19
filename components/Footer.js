@@ -24,7 +24,7 @@ function Footer() {
             <li>Contact us</li>
           </ul>
         </div>
-        <div>
+        <div id="contact">
           <h1 className="text-xl text-black font-semibold">Contact</h1>
           <ul className="text-sm space-y-3 mt-5">
             <li>Phone: +91 - 9333111777</li>

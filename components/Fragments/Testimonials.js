@@ -3,7 +3,10 @@ import React from "react";
 
 function Testimonials() {
   return (
-    <div className="lg:min-h-screen min-h-[550px] bg-[#F2F2F2] relative pb-20 lg:pb-10">
+    <div
+      id="testimonials"
+      className="lg:min-h-screen min-h-[550px] bg-[#F2F2F2] relative pb-20 lg:pb-10"
+    >
       <img
         src="/asset/testimonials_outline.png"
         alt=""

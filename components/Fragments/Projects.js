@@ -3,7 +3,10 @@ import React from "react";
 
 function Projects() {
   return (
-    <div className="lg:h-[950px] h-[1550px] bg-white relative overflow-hidden">
+    <div
+      id="showcase"
+      className="lg:h-[950px] h-[1550px] bg-white relative overflow-hidden"
+    >
       <img
         src="/asset/project_outline.png"
         alt=""

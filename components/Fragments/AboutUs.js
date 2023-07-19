@@ -3,7 +3,7 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div className="lg:min-h-screen h-[550px] bg-white relative">
+    <div id="about" className="lg:min-h-screen h-[550px] bg-white relative">
       <img
         src="/asset/about_outline.svg"
         alt=""

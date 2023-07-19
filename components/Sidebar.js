@@ -56,12 +56,69 @@ function Sidebar({ open, setOpen }) {
             </div>
           </div>
           <ul className="px-8 mt-10 text-white space-y-10 text-lg">
-            <li>Courses</li>
-            <li>About us</li>
-            <li>Showcase</li>
-            <li>Testimonials</li>
-            <li>Placement</li>
-            <li>Contact us</li>
+            <li
+              onClick={() => {
+                setOpen(false);
+                document
+                  .getElementById("courses")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Courses
+            </li>
+            <li
+              onClick={() => {
+                setOpen(false);
+                document
+                  .getElementById("about")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              About us
+            </li>
+            <li
+              onClick={() => {
+                setOpen(false);
+                document
+                  .getElementById("showcase")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Showcase
+            </li>
+            <li
+              onClick={() => {
+                setOpen(false);
+
+                document
+                  .getElementById("testimonials")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Testimonials
+            </li>
+            <li
+              onClick={() => {
+                setOpen(false);
+
+                document
+                  .getElementById("placement")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Placement
+            </li>
+            <li
+              onClick={() => {
+                setOpen(false);
+
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Contact us
+            </li>
           </ul>
         </div>
       )}

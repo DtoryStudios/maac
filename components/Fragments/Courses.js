@@ -260,7 +260,10 @@ function Courses() {
     config: config.gentle,
   });
   return (
-    <div className="lg:h-[1150px] h-[1000px] bg-black relative pb-20 lg:pb-32 overflow-hidden">
+    <div
+      id="courses"
+      className="lg:h-[1150px] h-[1000px] bg-black relative pb-20 lg:pb-32 overflow-hidden"
+    >
       <img
         src="/asset/courses_outline.png"
         alt=""

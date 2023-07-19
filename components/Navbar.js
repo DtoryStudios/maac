@@ -24,9 +24,33 @@ function Navbar() {
     >
       <img src="/asset/logo.png" className="lg:h-16 h-12" alt="" />
       <ul className="text-white/90 hidden lg:flex items-center space-x-12 ml-16 shrink-0">
-        <li>Courses</li>
-        <li>About us</li>
-        <li>Showcase</li>
+        <li
+          onClick={() => {
+            document
+              .getElementById("courses")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Courses
+        </li>
+        <li
+          onClick={() => {
+            document
+              .getElementById("about")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          About us
+        </li>
+        <li
+          onClick={() => {
+            document
+              .getElementById("showcase")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Showcase
+        </li>
         <li className="flex items-center relative group">
           <span>More</span>
           <svg
@@ -45,9 +69,36 @@ function Navbar() {
           </svg>
           <div className="absolute -translate-x-1/2 top-0 left-1/2 w-32 hidden group-hover:block">
             <ul className="mt-10 h-full w-full bg-[#30303a] shadow-2xl rounded-md py-4 text-sm">
-              <li className="px-4 py-3 hover:bg-[#222229]">Testimonials</li>
-              <li className="px-4 py-3 hover:bg-[#222229]">Placement</li>
-              <li className="px-4 py-3 hover:bg-[#222229]">Contact us</li>
+              <li
+                onClick={() => {
+                  document
+                    .getElementById("testimonials")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-4 py-3 hover:bg-[#222229]"
+              >
+                Testimonials
+              </li>
+              <li
+                onClick={() => {
+                  document
+                    .getElementById("placement")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-4 py-3 hover:bg-[#222229]"
+              >
+                Placement
+              </li>
+              <li
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+                className="px-4 py-3 hover:bg-[#222229]"
+              >
+                Contact us
+              </li>
             </ul>
           </div>
         </li>
