@@ -34,7 +34,11 @@ function Testimonials() {
             </div>
             <div className="bg-white rounded-md shrink-0 p-8">
               <div className="flex items-center text-sm">
-                <img src="/asset/student.png" className="h-10" alt="" />
+                <img
+                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1689739535/Dtory/maac/soumen-patra_swljdu.jpg"
+                  className="h-10"
+                  alt=""
+                />
                 <span className="ml-3">Soumen Patra</span>
                 <span className="ml-2">-</span>
                 <span className="text-gray-500 font-light ml-2">
@@ -50,7 +54,11 @@ function Testimonials() {
             </div>
             <div className="bg-white rounded-md shrink-0 p-8">
               <div className="flex items-center text-sm">
-                <img src="/asset/student.png" className="h-10" alt="" />
+                <img
+                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1689739536/Dtory/maac/manashi-moshan_birnio.jpg"
+                  className="h-10"
+                  alt=""
+                />
                 <span className="ml-3">Manashi Moshan</span>
                 <span className="ml-2">-</span>
                 <span className="text-gray-500 font-light ml-2">
@@ -83,7 +91,11 @@ function Testimonials() {
             </div>
             <div className="bg-white rounded-md shrink-0 p-8">
               <div className="flex items-center text-sm">
-                <img src="/asset/student.png" className="h-10" alt="" />
+                <img
+                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1689739535/Dtory/maac/rupam-patra_zvd8ym.jpg"
+                  className="h-10"
+                  alt=""
+                />
                 <span className="ml-3">Rupam Patra</span>
                 <span className="ml-2">-</span>
                 <span className="text-gray-500 font-light ml-2">
@@ -99,7 +111,11 @@ function Testimonials() {
             </div>
             <div className="bg-white rounded-md shrink-0 p-8">
               <div className="flex items-center text-sm">
-                <img src="/asset/student.png" className="h-10" alt="" />
+                <img
+                  src="https://res.cloudinary.com/db9kd4qbi/image/upload/v1689739535/Dtory/maac/pranav-kumar_m5kh91.jpg"
+                  className="h-10"
+                  alt=""
+                />
                 <span className="ml-3">Pranav Kumar</span>
                 <span className="ml-2">-</span>
                 <span className="text-gray-500 font-light ml-2">
