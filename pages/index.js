@@ -92,7 +92,7 @@ export default function Home() {
   const ref = React.useRef();
 
   return (
-    <main className="w-full overflow-x-hidden">
+    <div className="w-full h-fit overflow-x-hidden">
       <Landing />
       <Courses />
       <AboutUs />
@@ -102,6 +102,6 @@ export default function Home() {
       <Testimonials />
       <Ignite />
       <Footer />
-    </main>
+    </div>
   );
 }

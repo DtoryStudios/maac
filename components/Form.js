@@ -1,7 +1,7 @@
 import courses from "@/static/courses";
 import React, { useState, useEffect } from "react";
 
-function Form({ setOpen }) {
+function Form({ setOpen, open }) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -14,11 +14,20 @@ function Form({ setOpen }) {
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "unset");
   }, [loading]);
+
+  useEffect(() => {
+    open
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "unset");
+  }, [setOpen, open]);
   return (
     <div className="w-full lg:max-w-[500px] p-6 lg:p-8 bg-white backdrop-blur-2xl relative">
       {setOpen && (
         <button
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            document.body.style.overflowY = "unset";
+          }}
           className="absolute top-5 right-5 text-neutral-800"
         >
           <svg

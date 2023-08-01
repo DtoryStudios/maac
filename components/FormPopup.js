@@ -2,17 +2,12 @@ import React, { useEffect } from "react";
 import Form from "./Form";
 
 function FormPopup({ open, setOpen }) {
-  useEffect(() => {
-    open
-      ? (document.body.style.overflowY = "hidden")
-      : (document.body.style.overflowY = "unset");
-  }, [setOpen, open]);
   return (
     <>
       {open && (
         <div className="fixed inset-0 h-full w-full bg-black/70 backdrop-blur-sm z-30 flex items-center justify-center overflow-hidden">
           <div className="w-[90%] lg:w-fit">
-            <Form setOpen={setOpen} />
+            <Form setOpen={setOpen} open={open} />
           </div>
         </div>
       )}
