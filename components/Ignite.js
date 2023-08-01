@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import FormPopup from "./FormPopup";
 
 function Ignite() {
+  const [formPopupOpen, setFormPopupOpen] = useState(false);
+
   return (
     <div className="py-20 ignite-image flex flex-col justify-center px-6 lg:px-20">
       <h1 className="text-white text-5xl font-extrabold text-center lg:text-left">
@@ -13,9 +16,13 @@ function Ignite() {
         Awaken the Boundless Depths of Your Imagination to Transform Ideas into
         Extraordinary Masterpieces of Art and Expression with MAAC Durgapur.
       </p>
-      <button className="text-black px-5 py-4 lg:py-2 bg-[#EAC435] text-sm lg:w-fit rounded-md mt-6">
+      <button
+        onClick={() => setFormPopupOpen(true)}
+        className="text-black px-5 py-4 lg:py-2 bg-[#EAC435] text-sm lg:w-fit rounded-md mt-6"
+      >
         Apply now
       </button>
+      <FormPopup open={formPopupOpen} setOpen={setFormPopupOpen} />
     </div>
   );
 }
