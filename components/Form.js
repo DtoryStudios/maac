@@ -19,7 +19,7 @@ function Form({ setOpen, open }) {
     let endpoint = "/api/send";
 
     let params = {
-      to: "priyangsu26@gmail.com",
+      to: "vindhyavasini2009@gmail.com",
       subject: "Form submission (MAAC)",
       text: "",
       html: `
