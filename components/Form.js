@@ -94,6 +94,7 @@ function Form({ setOpen, open }) {
             );
             const data = await res.json();
             if (data.status == true) {
+              const emailRes = await sendEmail();
               setLoading(false);
               alert("Form submitted successfully");
               setFormData({
