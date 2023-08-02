@@ -29,7 +29,7 @@ function Landing() {
             onClick={() => setFormPopupOpen(true)}
             className="text-sm px-7 py-3 lg:py-4 bg-[#EAC435] hover:bg-[#c2a12d] text-black mt-5 font-medium rounded font-poppins transition-all"
           >
-            <span>Start Now - Admission Open 523</span>
+            <span>Start Now - Admission Open 2023</span>
           </button>
         </div>
         <div className="lg:w-1/2 flex items-center justify-center mt-16 lg:mt-0">
